@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #FFFFFF;
+  --color-bg-muted: #F7F7F7;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #222222;
+  --color-text-secondary: #717171;
+  --color-text-tertiary: #B0B0B0;
+  --color-border: #EBEBEB;
+  --color-primary: #FF385C;
+  --color-primary-hover: #E11D48;
+  --color-badge-bg: rgba(255,255,255,0.95);
+  --color-badge-text: #222222;
+  --color-badge-new-bg: #FF385C;
+  --color-badge-new-text: #FFFFFF;
+  --color-favorite-idle: rgba(0,0,0,0.5);
+  --color-favorite-active: #FF385C;
+  --color-rating-star: #222222;
+  --color-link: #222222;
+}
+
+html {
+  background: var(--color-bg);
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
