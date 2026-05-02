@@ -28,7 +28,7 @@ export default function RoomPriceReserve({
     <section
       className={
         isMobileBar
-          ? "fixed inset-x-0 bottom-16 z-[70] rounded-t-2xl border border-b-0 border-[color:var(--color-border)] bg-[var(--color-surface)] px-4 py-3 shadow-[0_-10px_30px_rgba(0,0,0,0.12)] md:hidden"
+          ? "fixed inset-x-0 bottom-16 z-[70] rounded-t-2xl border border-b-0 border-[color:var(--color-border)] bg-[var(--color-surface)] px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] shadow-[0_-10px_30px_rgba(0,0,0,0.12)] md:hidden"
           : "rounded-2xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.10)]"
       }
     >

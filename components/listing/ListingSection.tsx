@@ -23,10 +23,11 @@ export default function ListingSection({
     <section aria-labelledby={titleId} className="mb-8">
       <SectionHeader actionHref={sectionHref} id={titleId} title={title} />
       <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-1 scrollbar-none md:-mx-6 md:px-6 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:px-0 2xl:gap-6">
-        {listings.map((listing) => (
+        {listings.map((listing, index) => (
           <ListingCard
             key={listing.id}
             listing={listing}
+            priority={index === 0}
             queryString={queryString}
             variant="carousel"
           />

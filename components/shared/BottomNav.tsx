@@ -20,7 +20,7 @@ export default function BottomNav({ items }: BottomNavProps) {
         <div
           aria-label={dialogItem.label}
           aria-modal="true"
-          className="fixed inset-x-4 bottom-20 z-20 mx-auto max-w-sm rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-4 text-sm text-[color:var(--color-text-primary)] shadow-md md:hidden"
+          className="fixed inset-x-4 bottom-20 z-[90] mx-auto max-w-sm rounded-xl border border-[color:var(--color-border)] bg-[var(--color-surface)] p-4 text-sm text-[color:var(--color-text-primary)] shadow-md md:hidden"
           role="dialog"
         >
           <p className="font-semibold">{dialogItem.label}</p>
@@ -46,9 +46,13 @@ export default function BottomNav({ items }: BottomNavProps) {
       >
         <div className="mx-auto flex h-full max-w-md">
           {items.map((item) => {
+            const isExplore = item.id === "explore";
             const isActive =
-              pathname === item.href ||
-              (item.id === "explore" && pathname.startsWith("/catalog"));
+              isExplore &&
+              (pathname === "/" ||
+                pathname === item.href ||
+                pathname.startsWith("/catalog") ||
+                pathname.startsWith("/rooms"));
             const itemClass = `flex flex-1 flex-col items-center justify-center gap-1 text-[10px] font-medium focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--color-primary)] ${
               isActive
                 ? "text-[color:var(--color-primary)]"

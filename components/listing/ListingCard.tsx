@@ -7,12 +7,14 @@ import RatingPill from "@/components/shared/RatingPill";
 
 type ListingCardProps = {
   listing: Listing;
+  priority?: boolean;
   variant?: "carousel" | "stacked";
   queryString?: string;
 };
 
 export default function ListingCard({
   listing,
+  priority = false,
   variant = "carousel",
   queryString
 }: ListingCardProps) {
@@ -42,6 +44,7 @@ export default function ListingCard({
             alt={listing.title}
             className="object-cover transition-transform duration-200 ease-out motion-reduce:transform-none md:group-hover:scale-[1.02]"
             fill
+            priority={priority}
             sizes={
               isStacked
                 ? "(min-width: 1536px) 20vw, (min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"

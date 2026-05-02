@@ -17,10 +17,11 @@ export default function ListingList({ listings, queryString }: ListingListProps)
 
   return (
     <ul className="space-y-6 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-      {listings.map((listing) => (
+      {listings.map((listing, index) => (
         <li key={listing.id}>
           <ListingCard
             listing={listing}
+            priority={index === 0}
             queryString={queryString}
             variant="stacked"
           />
