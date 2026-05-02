@@ -2,6 +2,8 @@
 
 A mobile-first Airbnb-style teaching project that renders a complete browse → results → detail flow from typed mock data. The codebase is small enough to read end-to-end in one sitting and is laid out so each concept (routing, data shaping, server vs client components, design tokens, typed props) lives in an obvious place.
 
+**Live demo:** [https://airbnb-ui-clone-demo.vercel.app/](https://airbnb-ui-clone-demo.vercel.app/)
+
 ## What's inside
 
 Three routes, each rendered as a Next.js Server Component that hydrates client-only widgets where they're needed:
@@ -119,3 +121,18 @@ This is intentionally a UI-only project:
 - Mobile bottom nav: **Explore** routes to `/catalog`. **Wishlists** and **Log in** open an explanatory dialog rather than navigating.
 - Footer link groups, category-tab "Experiences"/"Services", and most secondary CTAs are placeholders.
 - Listing and room imagery is hot-linked from Unsplash; a network outage will leave image placeholders.
+
+## 📌 About This Project
+
+A project built during the AI Engineering program at 4Geeks Academy. [![4Geeks Academy](https://img.shields.io/badge/AI%20Engineering-4Geeks%20Academy-orange)](https://4geeksacademy.com/)
+
+## 👋 About Me
+
+**Cory McDaniel**  
+AI Engineer - Dallas-Fort Worth, TX
+
+Former controls engineer. Now building AI systems that help small businesses save time through automation.
+
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/corymcdanielai/)
+- 📧 corymcdaniel01@gmail.com
+- 📍 Dallas-Fort Worth, TX
